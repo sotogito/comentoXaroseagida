@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Modern Business - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href=/>Aroseagida</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">회사소개</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <li><a class="dropdown-item" href="/company/aroseagida/">아로새기다</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="/company/raonhaje/">라온하재</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">나의 편지함</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <li><a class="dropdown-item" href="/mymail">나의 편지</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="/mymail/blockmail">단어 숨기기</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">사용자</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                                    <li><a class="dropdown-item" href="/subscribe">구독</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="/profile">개인정보 수정</a></li>
+                                </ul>
+                            </li>
+                            <div class="d-grid"><a class="btn btn-outline-primary" href="/login">로그인</a></div>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Pricing section-->
+            <section class="bg-light py-5">
+                <div class="container px-5 my-5">
+                    <div class="text-center mb-5">
+                        <h1 class="fw-bolder">원하는 구독 요금제를 선택해보세요.</h1>
+                        <p class="lead fw-normal text-muted mb-0">병원 상담 후 결정하는 것을 추천해드립니다.</p>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <!-- 10회 무료 체험-->
+                        <div class="col-lg-6 col-xl-4">
+                            <div class="card mb-5 mb-xl-0">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold text-muted"></div>
+                                    <div class="mb-3">
+                                        <h2 class="fw-bold">10회 무료 체험</h2>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <strong>무료</strong>
+                                            <span class="text-muted">/ 월.</span>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1개월 구독-->
+                        <div class="col-lg-6 col-xl-4">
+                            <div class="card mb-5 mb-xl-0">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold text-muted"></div>
+                                    <div class="mb-3">
+                                        <h2 class="fw-bold">1개월 구독</h2>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <strong>13,000원</strong>
+                                            <span class="text-muted">/ 월.</span>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3개월 구독-->
+                        <div class="col-lg-6 col-xl-4">
+                            <div class="card mb-5 mb-xl-0">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold text-muted"></div>
+                                    <div class="mb-3">
+                                        <h2 class="fw-bold">3개월 구독</h2>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <strong>33,000</strong>
+                                            <span class="text-muted">/ 월.</span>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2023</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
