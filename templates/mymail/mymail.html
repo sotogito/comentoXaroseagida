@@ -57,60 +57,38 @@
             <section class="py-5">
                 <div class="container px-5 my-5">
                     <div class="text-center mb-5">
-                        <h1 class="fw-bolder">Frequently Asked Questions</h1>
-                        <p class="lead fw-normal text-muted mb-0">How can we help you?</p>
+                        <h1 class="fw-bolder">나의 편지함</h1>
+                        <p class="lead fw-normal text-muted mb-0">지금까지의 편지를 확인하고 글로 남겨보세요.</p>
                     </div>
                     <div class="row gx-5">
                         <div class="col-xl-8">
                             <!-- FAQ Accordion 1-->
-                            <h2 class="fw-bolder mb-3">Account &amp; Billing</h2>
+                            <h2 class="fw-bolder mb-3">총 편지 {{active_count}}개</h2>
                             <div class="accordion mb-5" id="accordionExample">
+                            {% if question_list %}
+                                {% for question in question_list %}
                                 <div class="accordion-item">
-                                {% if question_context %}
-                                    {% for question_context in question_list %}
-                                    <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">{{question_context.question_text}}</button></h3>
-                                    <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <h3 class="accordion-header" id="heading{{ question.id }}"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ question.id }}" aria-expanded="true" aria-controls="collapse{{ question.id }}">{{question.question_text}}</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapse{{ question.id }}" aria-labelledby="heading{{ question.id }}" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <strong>.</strong>
+                                            <strong>본문, 글로 남겨보세요</strong>
                                             It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
                                             <code>.accordion-body</code>
                                             , though the transition does limit overflow.
                                         </div>
                                     </div>
-                                    {% endfor %}
-                                {% else %}
-                                    <p>content 가 없습니다.</p>
-                                {% endif %}
                                 </div>
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Accordion Item #2</button></h3>
-                                    <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <strong>This is the second item's accordion body.</strong>
-                                            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-                                            <code>.accordion-body</code>
-                                            , though the transition does limit overflow.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Accordion Item #3</button></h3>
-                                    <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <strong>This is the third item's accordion body.</strong>
-                                            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-                                            <code>.accordion-body</code>
-                                            , though the transition does limit overflow.
-                                        </div>
-                                    </div>
-                                </div>
+                                {% endfor %}
+                            {% else %}
+                                <p>출력할 내용이 없어요.</p>
+                            {% endif %}
                             </div>
                             <!-- FAQ Accordion 2-->
                             <h2 class="fw-bolder mb-3">Website Issues</h2>
                             <div class="accordion mb-5 mb-xl-0" id="accordionExample2">
                                 <div class="accordion-item">
-                                    <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">Accordion Item #1</button></h3>
-                                    <div class="accordion-collapse collapse show" id="collapseOne2" aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
+                                    <h3 class="accordion-header" id="heading{{ question.id }}"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">Accordion Item #1</button></h3>
+                                    <div class="accordion-collapse collapse show" id="collapseOne2" aria-labelledby="heading{{ question.id }}" data-bs-parent="#accordionExample2">
                                         <div class="accordion-body">
                                             <strong>This is the first item's accordion body.</strong>
                                             It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
