@@ -42,31 +42,35 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">계정을 만드시겠어요?</h1>
                             </div>
-                            <form class="user">
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="First Name">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Last Name">
-                                    </div>
+                            <form class="user" id="floatingInput">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder="홍길동" >
+                                    <label for="floatingInput">이름 (홍길동)</label>
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
+
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder="1111">
+                                    <label for="floatingInput">생년월일 (600213)</label>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
-                                    </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder="02">
+                                    <label for="floatingInput">월 (02)</label>
                                 </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder="13">
+                                    <label for="floatingInput">일 (13)</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" placeholder="name@example.com">
+                                    <label for="floatingInput">이메일 (name@example.com)</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="floatingPassword" placeholder="비밀번호">
+                                    <label for="floatingPassword">비밀번호</label>
+                                </div>
+
+
                                 <a href="login.html" class="btn btn-primary btn-user btn-block">
                                     Register Account
                                 </a>

@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'pages',
     'account',
     'mymail',
-    'products'
+    'products',
+
 ]
 
 MIDDLEWARE = [

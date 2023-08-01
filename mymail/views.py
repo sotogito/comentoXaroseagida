@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from .models import PrevLetter
 
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .serializers import PrevLetterSerializer
+
+
 
 def mymail(request):
     active_count = PrevLetter.objects.filter(is_active=True).count()
@@ -13,3 +18,20 @@ def mymail(request):
 
 def blockmail(request):
     return render(request, 'mymail/blockmail.html')
+
+####################################
+@api_view(['POST'])
+def receive_unity_data(request):
+    serializer = PrevLetterSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=201)
+    return Response(serializer.errors, status=400)
+
+@api_view(['GET'])
+def get_prev_letters(request):
+    prev_letters = PrevLetter.objects.all()
+    serializer = PrevLetterSerializer(prev_letters, many=True)
+    return Response(serializer.data)
+
+
