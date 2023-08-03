@@ -19,7 +19,7 @@ def mymail(request):
 def blockmail(request):
     return render(request, 'mymail/blockmail.html')
 
-####################################
+#############unity##############
 @api_view(['POST'])
 def receive_unity_data(request):
     serializer = PrevLetterSerializer(data=request.data)

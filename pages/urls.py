@@ -24,4 +24,5 @@ urlpatterns = [
     path('company/aroseagida/',views.aroseagida),
     path('company/raonhaje/',views.raonhaje),
     path('test/',views.test),
+    path('company_info/',views.company)
 ]

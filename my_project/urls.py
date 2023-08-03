@@ -6,7 +6,7 @@ urlpatterns = [
     path('mysite/', include('mysite.urls')),
     path('',include('pages.urls')),
     path('',include('account.urls')),
-    #하위페이지를 적으면 DjangoApiUrl이 안된다...
     path('',include('mymail.urls')),
-    path('',include('products.urls'))
+    path('',include('products.urls')),
+    path('accounts/', include('accounts.urls')),
 ]

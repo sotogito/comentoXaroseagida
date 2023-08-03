@@ -13,3 +13,7 @@ def raonhaje(request):
 
 def test(request):
     return render(request, 'pages/test.html')
+
+def company(request):
+    return render(request, 'pages/company_info.html')
+
